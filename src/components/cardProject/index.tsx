@@ -2,8 +2,10 @@ import HotelPet from "../../service/icons/HotelPet.svg";
 import KenzieHub from "../../service/icons/KenzieHub.svg";
 import NuKenzie from "../../service/icons/NuKenzie.svg";
 import Hamburgueria from "../../service/icons/Hamburgueria.svg";
-
 import { DivContent, LiWrapper } from "./cardStyle";
+import BackgroundModal from "../backgroundModal";
+import { useState } from "react";
+import ProjectTecnology from "../projectTecnology";
 
 interface TypedCard {
   name: string;
@@ -11,8 +13,11 @@ interface TypedCard {
   img: string;
   direction?: string;
   url: string;
+  tecnologias : any
 }
-const Project = ({ name, description, img, direction, url }: TypedCard) => {
+const Project = ({ name, description, img, direction, url,tecnologias }: TypedCard) => {
+  const [modal, setIsOpenModal] = useState(false);
+
   const renderImg = (img: string) => {
     switch (img) {
       case "NuKenzie":
@@ -30,14 +35,24 @@ const Project = ({ name, description, img, direction, url }: TypedCard) => {
   return (
     <LiWrapper direction={direction}>
       <DivContent>
-        <img src={renderImg(img)} alt={name} />
+        <img src={renderImg(img)} alt={name}  onClick={() => setIsOpenModal(true)} />
       </DivContent>
       <div className="content">
         <h2>{name}</h2>
         <p>{description}</p>
         <a target="_blank" rel="noreferrer" href={url}>
-          <button>Access</button>
+          <button>Acessar</button>
         </a>
+
+        {modal && (
+          <BackgroundModal>
+            <ProjectTecnology tecnologias={tecnologias} />
+            <button 
+              className="close-modal"
+              onClick={() => setIsOpenModal(false)}
+            >Fechar</button>
+          </BackgroundModal>
+        )}
       </div>
     </LiWrapper>
   );

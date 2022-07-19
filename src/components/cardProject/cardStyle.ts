@@ -90,6 +90,21 @@ const DivContent = styled.div`
     animation-iteration-count: infinite;
     animation-duration: 5s;
   }
+  .close-modal{
+  background: #FF3344;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  transition: .3s;
+  :hover{
+    filter: brightness(.7);
+  }
+}
   @keyframes slq {
     0% {
       transform: rotateZ(0deg);
@@ -99,5 +114,5 @@ const DivContent = styled.div`
     }
   }
 `;
-
 export { LiWrapper, DivContent };
+

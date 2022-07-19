@@ -17,7 +17,7 @@ const HomeInfoText = ({ navigate }: TypeNav) => {
         </p>
         <DivOrganizer>
           <mesh onPointerDown={() => navigate("/projects")}>
-            <Button width="120px" background={true} text={"Projects"} />
+            <Button width="120px" background={true} text={"Projetos"} />
           </mesh>
 
           <mesh>

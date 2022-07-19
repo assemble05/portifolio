@@ -13,6 +13,7 @@ interface ObjectType {
   description: string;
   img: string;
   url: string;
+  tecnologias : any
 }
 interface TypeProps {
   props?: any;
@@ -85,6 +86,7 @@ const Projects = ({ props }: TypeProps) => {
                   name={project.name}
                   key={project.name}
                   description={project.description}
+                  tecnologias={project.tecnologias}
                 />
               );
             }
@@ -95,6 +97,7 @@ const Projects = ({ props }: TypeProps) => {
                 name={project.name}
                 key={project.name}
                 description={project.description}
+                tecnologias={project.tecnologias}
               />
             );
           })}

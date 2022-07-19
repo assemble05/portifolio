@@ -5,6 +5,8 @@ const db = [
       "Aplicação com o intuito de estabelecer uma comunicação entre um tutor e o hotel.",
     img: "HotelPet",
     url: "https://hotel-pet.vercel.app",
+    tecnologias : ["CSS","TypeScript","React","HTML5"]
+
   },
   {
     name: "Kenzie Hub",
@@ -12,6 +14,7 @@ const db = [
       "Plataforma para desenvolvedores registrarem seus conhecimentos e trabalhos.",
     img: "KenzieHub",
     url: "https://react-entrega-s2-kenzie-hub-assemble05.vercel.app",
+    tecnologias : ["CSS","React","HTML5","JavaScript"]
   },
   {
     name: "Nu Kenzie",
@@ -19,12 +22,14 @@ const db = [
       "Plataforma para controle financeiro, baseado em registros de despesas e entrada.",
     img: "NuKenzie",
     url: "https://nukenzie-alpha.vercel.app",
+    tecnologias : ["CSS","React","HTML5","JavaScript"]
   },
   {
     name: "Hamburgueria",
     description: "E-commerce de alimentos",
     img: "Hamburgueria",
     url: "https://react-entrega-s1-hamburgueria-da-kenzie-assemble05-assemble05.vercel.app",
+    tecnologias : ["CSS","React","HTML5","JavaScript"]
   },
 ];
 export const tecnologies = [
