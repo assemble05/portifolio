@@ -5,7 +5,5 @@ const MainWrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
- 
-
-`
-export default MainWrapper
+`;
+export default MainWrapper;

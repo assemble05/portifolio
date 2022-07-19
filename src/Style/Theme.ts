@@ -1,7 +1,6 @@
 import { ThemeProvider } from "styled-components";
 
 const theme = {
-    fg: "black",
-    bg: "white"
-  };
-  
+  fg: "black",
+  bg: "white",
+};

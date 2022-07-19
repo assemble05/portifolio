@@ -1,11 +1,11 @@
-import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import * as React from "react";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 interface typedNavigation {
-  navigate: Function
+  navigate: Function;
 }
 
 const ITEM_HEIGHT = 48;
@@ -20,22 +20,22 @@ const DropDown = ({ navigate }: typedNavigation) => {
   };
 
   return (
-    <div className='DropDownMenu' >
+    <div className="DropDownMenu">
       <IconButton
         aria-label="more"
         id="long-button"
-        aria-controls={open ? 'long-menu' : undefined}
-        aria-expanded={open ? 'true' : undefined}
+        aria-controls={open ? "long-menu" : undefined}
+        aria-expanded={open ? "true" : undefined}
         aria-haspopup="true"
         onClick={handleClick}
       >
         <MoreVertIcon style={{ color: "#fff" }} />
       </IconButton>
       <Menu
-        className='dropDown'
+        className="dropDown"
         id="long-menu"
         MenuListProps={{
-          'aria-labelledby': 'long-button',
+          "aria-labelledby": "long-button",
         }}
         anchorEl={anchorEl}
         open={open}
@@ -43,12 +43,11 @@ const DropDown = ({ navigate }: typedNavigation) => {
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
-            width: '20ch',
-            borderRadius: '0px'
+            width: "20ch",
+            borderRadius: "0px",
           },
         }}
       >
-
         <MenuItem key={"HomeRoute"} onClick={() => navigate("/")}>
           Inicio
         </MenuItem>
@@ -58,5 +57,5 @@ const DropDown = ({ navigate }: typedNavigation) => {
       </Menu>
     </div>
   );
-}
-export default DropDown
+};
+export default DropDown;
