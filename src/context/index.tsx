@@ -1,13 +1,16 @@
-import { ReactNode } from "react"
-import NavProvider from "./navigate"
-import ThemePovider from "./theme"
-
+import { ReactNode } from "react";
+import NavProvider from "./navigate";
+import ThemePovider from "./theme";
 
 interface ProvidersProps {
-    children: ReactNode
-  }
-
-const Providers =({children} : ProvidersProps) => {
- return <ThemePovider><NavProvider>{children}</NavProvider></ThemePovider>
+  children: ReactNode;
 }
-export default Providers
+
+const Providers = ({ children }: ProvidersProps) => {
+  return (
+    <ThemePovider>
+      <NavProvider>{children}</NavProvider>
+    </ThemePovider>
+  );
+};
+export default Providers;

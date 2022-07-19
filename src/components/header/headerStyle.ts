@@ -24,7 +24,6 @@ const HeaderWrapper = styled.header`
       button {
         padding: 10px 12px;
         width: 86px;
-       
       }
       button:hover {
         background-color: ${(props) => props.theme.colors.primary};
@@ -32,22 +31,23 @@ const HeaderWrapper = styled.header`
         animation-duration: 1.5s;
         animation-timing-function: linear;
         animation-iteration-count: inherit;
-   
       }
       @keyframes hoverBtn {
-        0%{opacity:0.2;
+        0% {
+          opacity: 0.2;
         }
-        
+
         20% {
-          opacity:0.4;
+          opacity: 0.4;
         }
-        40% {opacity:0.6;
-        
+        40% {
+          opacity: 0.6;
         }
         60% {
-          opacity:0.8;
+          opacity: 0.8;
         }
-        100% {opacity:1.0;
+        100% {
+          opacity: 1;
         }
       }
     }
