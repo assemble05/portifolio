@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import NavProvider from "./navigate"
 import ThemePovider from "./theme"
 
 
@@ -7,6 +8,6 @@ interface ProvidersProps {
   }
 
 const Providers =({children} : ProvidersProps) => {
- return <ThemePovider>{children}</ThemePovider>
+ return <ThemePovider><NavProvider>{children}</NavProvider></ThemePovider>
 }
 export default Providers
