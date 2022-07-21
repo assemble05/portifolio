@@ -23,7 +23,7 @@ const HeaderWrapper = styled.header`
       height: 50px;
       button {
         padding: 10px 12px;
-        width: 86px;
+        width: 95px;
       }
       button:hover {
         background-color: ${(props) => props.theme.colors.primary};

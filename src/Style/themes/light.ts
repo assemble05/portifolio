@@ -6,5 +6,6 @@ export default {
     background: " #2E2A53",
     color: "#ffff",
     borderHead: "#fda400d4",
+    styledYellow: "#fdc200ff",
   },
 };

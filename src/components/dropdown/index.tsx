@@ -54,6 +54,9 @@ const DropDown = ({ navigate }: typedNavigation) => {
         <MenuItem key={"ProjectROute"} onClick={() => navigate("/projects")}>
           Projetos
         </MenuItem>
+        <MenuItem key={"Sobre mim"} onClick={() => navigate("/about-me")}>
+          Sobre mim
+        </MenuItem>
       </Menu>
     </div>
   );
