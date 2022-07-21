@@ -29,6 +29,7 @@ const Header = () => {
       <nav>
         <button onClick={() => navigate("/")}>Inicio</button>
         <button onClick={() => navigate("/projects")}>Projetos</button>
+        <button onClick={() => navigate("/about-me")}>Sobre mim</button>
       </nav>
     </HeaderWrapper>
   );
