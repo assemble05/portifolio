@@ -27,11 +27,11 @@ const LiWrapper = styled.li<themeProps>`
   a {
     text-decoration: none;
   }
-  button {
+  .button {
     position: absolute;
-    width: 100px;
-    height: 25px;
-    font-size: 12px;
+    width: 90px;
+    height: 40px;
+    font-size: 14px;
     border-radius: 8px;
     color: #fff;
     display: flex;
@@ -39,12 +39,15 @@ const LiWrapper = styled.li<themeProps>`
     align-items: center;
     background-image: linear-gradient(90deg, #f5636b, #f74987);
   }
-  button:hover {
+  ;button:hover {
     background-image: linear-gradient(90deg, #fe343f, #f91868);
   }
   .content {
     width: 38vw;
     max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   @media (min-width: 768px) {
     h2 {
@@ -114,5 +117,25 @@ const DivContent = styled.div`
     }
   }
 `;
-export { LiWrapper, DivContent };
+
+
+interface di {
+  direct: boolean;
+
+}
+
+const DivButtons = styled.div<di>`
+display: flex;
+flex-direction: ${(props) => props.direct === true ? 'row-reverse' : 'row'};
+margin-right: ${(props) => props.direct === true ? '81px' : '0px'};
+
+.git{
+  margin-right: ${(props) => props.direct === true ? '4px' : '0px'};
+  margin-left: ${(props) => props.direct === true ? '0px' : '4px'};
+  position: ${(props) => props.direct === true ? 'block' : 'relative'};
+  left: ${(props) => props.direct === true ? '0px' : '100px'};
+}
+
+`
+export { LiWrapper, DivContent,DivButtons };
 

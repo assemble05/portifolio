@@ -13,7 +13,7 @@ const HomeInfoText = ({ navigate }: TypeNav) => {
         <h2>Olá, eu sou João Neto</h2>
         <p>
           Seja bem-vindo!! essa aplicação contem alguns de meus projetos
-          Front-End
+          em Desenvolvimento-Web
         </p>
         <DivOrganizer>
           <mesh onPointerDown={() => navigate("/projects")}>

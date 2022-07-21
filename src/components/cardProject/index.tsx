@@ -2,10 +2,12 @@ import HotelPet from "../../service/icons/HotelPet.svg";
 import KenzieHub from "../../service/icons/KenzieHub.svg";
 import NuKenzie from "../../service/icons/NuKenzie.svg";
 import Hamburgueria from "../../service/icons/Hamburgueria.svg";
-import { DivContent, LiWrapper } from "./cardStyle";
+import { DivButtons, DivContent, LiWrapper } from "./cardStyle";
 import BackgroundModal from "../backgroundModal";
 import { useState } from "react";
 import ProjectTecnology from "../projectTecnology";
+import Button from "../button";
+import { AiFillGithub } from "react-icons/ai";
 
 interface TypedCard {
   name: string;
@@ -14,8 +16,10 @@ interface TypedCard {
   direction?: string;
   url: string;
   tecnologias : any
+  repo : string
+  has_repo : boolean
 }
-const Project = ({ name, description, img, direction, url,tecnologias }: TypedCard) => {
+const Project = ({ name, description, img, direction, url,tecnologias, repo, has_repo }: TypedCard) => {
   const [modal, setIsOpenModal] = useState(false);
 
   const renderImg = (img: string) => {
@@ -32,6 +36,9 @@ const Project = ({ name, description, img, direction, url,tecnologias }: TypedCa
         return "";
     }
   };
+  const directionGit = () => {
+     return direction === "invert" ? true : false
+  }
   return (
     <LiWrapper direction={direction}>
       <DivContent>
@@ -40,9 +47,20 @@ const Project = ({ name, description, img, direction, url,tecnologias }: TypedCa
       <div className="content">
         <h2>{name}</h2>
         <p>{description}</p>
+       <DivButtons direct={directionGit()}>
         <a target="_blank" rel="noreferrer" href={url}>
-          <button>Acessar</button>
+          <button className="button">Acessar</button>
         </a>
+        {
+         has_repo &&  <a className="git" href={repo} target="_blank">
+              <Button width="50px" style={{width: "40px", height : "40px", borderRadius: "6px"}} border={true}>
+                <AiFillGithub size={20} />
+              </Button>
+        </a>
+
+        }
+
+       </DivButtons>
 
         {modal && (
           <BackgroundModal>

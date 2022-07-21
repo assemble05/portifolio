@@ -4,6 +4,8 @@ const db = [
     description:
       "Aplicação com o intuito de estabelecer uma comunicação entre um tutor e o hotel.",
     img: "HotelPet",
+    has_repo : true,
+    repo : "https://github.com/assemble05/Hotel-Pet",
     url: "https://hotel-pet.vercel.app",
     tecnologias : ["CSS","TypeScript","React","HTML5"]
 
@@ -13,6 +15,8 @@ const db = [
     description:
       "Plataforma para desenvolvedores registrarem seus conhecimentos e trabalhos.",
     img: "KenzieHub",
+    has_repo : false,
+    repo :null,
     url: "https://react-entrega-s2-kenzie-hub-assemble05.vercel.app",
     tecnologias : ["CSS","React","HTML5","JavaScript"]
   },
@@ -21,6 +25,8 @@ const db = [
     description:
       "Plataforma para controle financeiro, baseado em registros de despesas e entrada.",
     img: "NuKenzie",
+    has_repo : false,
+    repo :null,
     url: "https://nukenzie-alpha.vercel.app",
     tecnologias : ["CSS","React","HTML5","JavaScript"]
   },
@@ -28,9 +34,20 @@ const db = [
     name: "Hamburgueria",
     description: "E-commerce de alimentos",
     img: "Hamburgueria",
+    has_repo : false,
+    repo :null,
     url: "https://react-entrega-s1-hamburgueria-da-kenzie-assemble05-assemble05.vercel.app",
     tecnologias : ["CSS","React","HTML5","JavaScript"]
   },
+  {
+    name: "IziService",
+    description: "API em Django com persistência de dados no PostgreSQL para facilitar a contratação de pequenos serviços",
+    img: "Izi",
+    has_repo : true,
+    url: "https://caps-m5.herokuapp.com/api/schema/redoc/",
+    repo : "https://github.com/assemble05/caps-m5",
+    tecnologias : ["Django","Postgresql","Python", "Docker"]
+  }
 ];
 export const tecnologies = [
   {
@@ -65,6 +82,17 @@ export const tecnologies = [
     alt: "Redux",
     url: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
   },
+  {
+    alt: "Django",
+    url: "https://github.com/devicons/devicon/blob/master/icons/django/django-plain-wordmark.svg"
+  },{
+    alt : "Python",
+    url: "https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg"
+  },
+  {
+    alt : "Docker",
+    url: "https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg"
+  }
 ];
 
 export default db;
