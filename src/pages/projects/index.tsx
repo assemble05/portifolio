@@ -14,6 +14,8 @@ interface ObjectType {
   img: string;
   url: string;
   tecnologias : any
+  repo : string | any
+  has_repo : boolean
 }
 interface TypeProps {
   props?: any;
@@ -87,6 +89,8 @@ const Projects = ({ props }: TypeProps) => {
                   key={project.name}
                   description={project.description}
                   tecnologias={project.tecnologias}
+                  repo={project.repo}
+                  has_repo={project.has_repo}
                 />
               );
             }
@@ -96,8 +100,10 @@ const Projects = ({ props }: TypeProps) => {
                 img={project.img}
                 name={project.name}
                 key={project.name}
+                repo={project.repo}
                 description={project.description}
                 tecnologias={project.tecnologias}
+                has_repo={project.has_repo}
               />
             );
           })}
@@ -112,32 +118,6 @@ const Projects = ({ props }: TypeProps) => {
             maxWidth: "1000px",
           }}
         >
-          <a
-            href="https://github.com/assemble05"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
-              alt="instagram"
-            />
-          </a>
-          <a href="mailto:joneto18.jh@gmail.com@gmail.com">
-            <img
-              src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=pink"
-              alt="gmail"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/joão-henrique-pereira-neto-6776251ba/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-              alt="linkedin"
-            />
-          </a>
         </div>
       </div>
     </>
